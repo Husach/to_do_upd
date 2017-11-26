@@ -1,0 +1,7 @@
+_psd/
+_jpg/
+node_modules/
+task/
+.DS_Store
+Thumbs.db
+*.sublime*

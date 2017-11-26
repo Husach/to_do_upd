@@ -1,0 +1,140 @@
+.card {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 10px; }
+  .card__mark {
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: grey;
+    margin: 0 7px 3px 2px; }
+    .card__mark:first-child {
+      margin-left: 16px; }
+    .card__mark--red {
+      background: #df5b5b; }
+    .card__mark--yellow {
+      background: #f1c752; }
+    .card__mark--green {
+      background: #8edc87; }
+    .card__mark--blue {
+      background: #7db6fd; }
+  .card__text {
+    font-size: 16px;
+    color: #424a59;
+    margin: 0 0 11px 16px; }
+    .card__text-small {
+      position: relative;
+      font-size: 12px;
+      color: #667081; }
+      .card__text-small--progress {
+        margin: 5px 0 5px 15px; }
+      .card__text-small--ok {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #8ddc86;
+        margin: 5px 0 5px 15px; }
+    .card__text--check {
+      font-size: 14px;
+      margin-left: 5px; }
+    .card__text--color {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -10px;
+      right: 35px;
+      width: 32px;
+      height: 20px;
+      color: #8edc87;
+      border: 1px solid #8edc87;
+      border-radius: 10px; }
+  .card__gallery {
+    position: relative;
+    margin: 0 0 0 16px; }
+  .card__progress {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; }
+    .card__progress-value {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      background-size: auto;
+      border: none;
+      width: calc(100% - 80px);
+      height: 4px;
+      margin: 0 0 0 16px;
+      position: relative; }
+      .card__progress-value::-webkit-progress-bar {
+        background: #e7e9ee;
+        border-radius: 2px; }
+      .card__progress-value::-webkit-progress-value {
+        background: #8ddc86;
+        border-radius: 2px; }
+  .card-footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e3e6ed;
+    padding: 5px 0 7px 5px; }
+    .card-footer__comment {
+      width: 20px;
+      height: 20px;
+      fill: #7db6fd;
+      margin: 0 7px 0 16px;
+      -webkit-transform: scaleX(-1);
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1); }
+    .card-footer__clip {
+      width: 20px;
+      height: 20px;
+      fill: #df5c5c;
+      margin: 0 10px; }
+  .card__ok {
+    width: 18px;
+    height: 18px;
+    fill: #fff; }
+  .card__form {
+    padding-left: 15px; }
+  .card__checkbox {
+    display: none; }
+    .card__checkbox-custom {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #d0d4dd;
+      border-radius: 2px;
+      margin: 7px 0; }
+    .card__checkbox:checked + .card__checkbox-custom::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #8edc87 url("../img/check.png") no-repeat center center;
+      background-size: 16px 16px;
+      border-radius: 2px; }
+
+.gallery__img:first-child {
+  margin-right: 25px; }
+
+@media screen and (min-width: 1440px) {
+  .card__progress-value {
+    width: 184px; } }
+.label {
+  display: inline-block;
+  vertical-align: middle; }
+
+/*# sourceMappingURL=card.css.map */

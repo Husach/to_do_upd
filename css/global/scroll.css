@@ -1,0 +1,114 @@
+body, td, th {
+  font-family: Tahoma, Verdana, Arial;
+  font-size: 11px; }
+
+div {
+  outline: none; }
+
+#news {
+  height: 345px;
+  width: 172px;
+  overflow: hidden;
+  padding: 10px 0 10px 10px;
+  line-height: 15px;
+  background: #ccc; }
+
+.news {
+  float: left; }
+
+.news .jScrollPaneTrack {
+  background: url(osx_trac.gif) repeat-y; }
+
+.news .jScrollPaneDrag {
+  background: url(osx_drag.gif) repeat-y; }
+
+.news .jScrollPaneDragTop {
+  background: url(osx_drah.gif) no-repeat;
+  height: 6px; }
+
+.news .jScrollPaneDragBottom {
+  background: url(osx_drai.gif) no-repeat;
+  height: 7px; }
+
+.news a.jScrollArrowUp {
+  height: 16px;
+  background: url(osx_arro.gif) no-repeat 0 -16px; }
+
+.news a.jScrollArrowUp:hover {
+  background-position: 0 0; }
+
+.news a.jScrollArrowDown {
+  height: 16px;
+  background: url(osx_arrp.gif) no-repeat 0 -16px; }
+
+.news a.jScrollArrowDown:hover {
+  background-position: 0 0; }
+
+/* IE SPECIFIC HACKED STYLES */
+* html .news .jScrollPaneDragBottom {
+  bottom: -1px; }
+
+/* /IE SPECIFIC HACKED STYLES */
+.jScrollPaneContainer {
+  position: relative;
+  overflow: hidden;
+  z-index: 1; }
+
+.jScrollPaneTrack {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: #aaa; }
+
+.jScrollPaneDrag {
+  position: absolute;
+  background: #666;
+  cursor: pointer;
+  overflow: hidden; }
+
+.jScrollPaneDragTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+
+.jScrollPaneDragBottom {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  overflow: hidden; }
+
+a.jScrollArrowUp {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  text-indent: -2000px;
+  overflow: hidden;
+  /*background-color: #666;*/
+  height: 9px; }
+
+a.jScrollArrowUp:hover {
+  /*background-color: #f60;*/ }
+
+a.jScrollArrowDown {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  text-indent: -2000px;
+  overflow: hidden;
+  /*background-color: #666;*/
+  height: 9px; }
+
+a.jScrollArrowDown:hover {
+  /*background-color: #f60;*/ }
+
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
+  /*background-color: #f00;*/ }
+
+/*# sourceMappingURL=scroll.css.map */
