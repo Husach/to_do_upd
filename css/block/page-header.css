@@ -116,6 +116,8 @@
     .header__magnify:hover {
       width: 24px;
       height: 24px; }
+  .header__bell {
+    margin-left: 30px; }
 
   .user {
     display: block;

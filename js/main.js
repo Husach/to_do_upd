@@ -53,7 +53,7 @@ window.onload = function () {
 
   function mobileSearch() {
     mainSearch.classList.toggle("form__search--header");
-    mainSearch.classList.toggle("form--visible");
+    mainSearch.classList.toggle("form__search--visible");
   } 
 }
 
