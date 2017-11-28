@@ -22,12 +22,13 @@
     overflow: hidden;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 0;
+    padding: 0 0 0 125px;
   }  
 }
 
 @media screen and (min-width: 1440px) {
   .main-content {
     width: calc(100% - 255px);
+    padding-left: 30px;
   }
 }

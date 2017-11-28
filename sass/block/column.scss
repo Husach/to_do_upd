@@ -1,5 +1,4 @@
 .column {
-
   &-header {
     display: flex;
     justify-content: space-between;
@@ -41,9 +40,6 @@
     overflow: hidden;
     overflow-y: scroll;
     margin-right: 13px;
-    &:first-child {
-      margin-left: 90px;
-    }
 
     &-wrap {
       width: 262px;
@@ -52,7 +48,7 @@
    
     &-header {
       height: 50px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       background: #208abe;
 
       &__title {
@@ -65,11 +61,5 @@
         fill: #fff;
       }
     }
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .column:first-child {
-      margin-left: 30px;
   }
 }
