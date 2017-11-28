@@ -540,28 +540,34 @@ template {
   display: inline-block;
   vertical-align: middle; }
 
-.column-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  padding: 0 20px; }
-  .column-header__title {
-    flex-grow: 1;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #424a59; }
-  .column-header__link {
-    height: 24px; }
-  .column-header__img {
-    width: 24px;
-    height: 24px;
-    fill: #424a59; }
-    .column-header__img:hover {
-      cursor: pointer;
-      opacity: 0.5; }
+.column {
+  white-space: normal; }
+  .column-header {
+    margin-bottom: 10px; }
+  .column-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    padding: 0 20px; }
+    .column-top__title {
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #424a59; }
+    .column-top__link {
+      height: 24px; }
+    .column-top__img {
+      width: 24px;
+      height: 24px;
+      fill: #424a59; }
+      .column-top__img:hover {
+        cursor: pointer;
+        opacity: 0.5; }
 
 @media screen and (min-width: 1024px) {
   .column {
@@ -572,17 +578,16 @@ template {
     overflow-y: scroll;
     margin-right: 13px; }
     .column-wrap {
-      width: 262px;
-      padding-top: 30px; }
-    .column-header {
-      height: 50px;
+      width: 262px; }
+    .column-top {
+      min-height: 50px;
       margin-bottom: 10px;
       background: #208abe; }
-      .column-header__title {
+      .column-top__title {
         font-family: 'Rubik', sans-serif;
         font-size: 12px;
         color: #fff; }
-      .column-header__img {
+      .column-top__img {
         fill: #fff; } }
 .main-nav {
   background: #2d323e; }
@@ -827,7 +832,7 @@ template {
     overflow: hidden;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 0 0 0 125px; } }
+    padding: 30px 0 0 125px; } }
 @media screen and (min-width: 1440px) {
   .main-content {
     width: calc(100% - 255px);
@@ -904,5 +909,3 @@ template {
 body {
   line-height: 1.333;
   width: 100%; }
-
-/*# sourceMappingURL=style.css.map */

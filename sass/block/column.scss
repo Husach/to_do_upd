@@ -1,13 +1,21 @@
 .column {
+  white-space: normal;
+
   &-header {
+    margin-bottom: 10px;
+  }
+
+  &-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    min-height: 70px;
     padding: 0 20px;
 
     &__title {
+      display: flex;
       flex-grow: 1;
+      flex-wrap: wrap;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       font-weight: 500;
@@ -43,11 +51,10 @@
 
     &-wrap {
       width: 262px;
-      padding-top: 30px;
     }
-   
-    &-header {
-      height: 50px;
+
+    &-top {
+      min-height: 50px;
       margin-bottom: 10px;
       background: #208abe;
 
