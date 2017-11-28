@@ -11,58 +11,57 @@
 
 <body>
   <header class="page-header">
-  	<div class="header-toggle" id="header-toggle">
-  		<p class="card__text  header-toggle__text  header-toggle__text--to  hidden" id="text-to">To Do</p>
-  		<!-- backburger  -->
-  		<svg viewBox="0 0 24 24" class="header-toggle__img  header-toggle__img--hidden" id="menu-closed">
-    		<path d="M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z" />
-			</svg>
-			<!-- burger -->
-			<svg viewBox="0 0 24 24" class="header-toggle__img" id="menu-open">
-				<path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-			</svg>
-			<p class="card__text  header-toggle__text  header-toggle__text--do">Do list</p>
-  	</div>
-										
-  	<div class="header-content">
-  		<form class="form">                                     
-  			<input type="text" name="main-search" class="form__search  form__search--header" id="main-search">
-  		</form>
+  	<form class="form">
+      <input type="text" name="main-search" class="form__search  form__search--header" id="main-search">
+    </form>
 			
-			<a href="#">
-				<svg viewBox="0 0 24 24" class="header__magnify  header__magnify--hidden" id="header__magnify">
-					<path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
-				</svg>
-  		</a>
+		<a href="#" class="page-header__search">
+			<svg viewBox="0 0 24 24" class="page-header__magnify  page-header__magnify--hidden" id="page-header__magnify">
+				<path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+			</svg>
+  	</a>
   		
-  		<a href="#" class="header__bell">
-  		  <svg viewBox="0 0 24 24" class="header__bell-img">
-  		  	<path d="M14,20A2,2 0 0,1 12,22A2,2 0 0,1 10,20H14M12,2A1,1 0 0,1 13,3V4.08C15.84,4.56 18,7.03 18,10V16L21,19H3L6,16V10C6,7.03 8.16,4.56 11,4.08V3A1,1 0 0,1 12,2Z" />
-  		  </svg>
-  		</a>
+  	<a href="#" class="page-header__bell">
+  		<svg viewBox="0 0 24 24" class="page-header__bell-img">
+  		  <path d="M14,20A2,2 0 0,1 12,22A2,2 0 0,1 10,20H14M12,2A1,1 0 0,1 13,3V4.08C15.84,4.56 18,7.03 18,10V16L21,19H3L6,16V10C6,7.03 8.16,4.56 11,4.08V3A1,1 0 0,1 12,2Z" />
+  		</svg>
+  	</a>
 
-  		<details class="header__user">
-  			<summary class="user">
-  				<img src="img/user_logo.png" alt="user_logo" class="user__photo">
-  				<svg viewBox="0 0 24 24" class="user__toggle">
-  					<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-  				</svg>
-  			</summary>
-  		</details>
-  	</div>
+  	<details class="page-header__user">
+  		<summary class="user">
+  			<img src="img/user_logo.png" alt="user_logo" class="user__photo">
+  			<svg viewBox="0 0 24 24" class="user__toggle">
+  				<path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+  			</svg>
+  		</summary>
+  	</details>
   </header>
 
   <main class="page-main">
+    <div class="menu-toggle" id="menu-toggle">
+      <p class="menu-toggle__text  menu-toggle__text--to  hidden" id="text-to">To Do</p>
+      <!-- backburger  -->
+      <svg viewBox="0 0 24 24" class="menu-toggle__img  menu-toggle__img--hidden" id="menu-closed">
+        <path d="M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z" />
+      </svg>
+      <!-- burger -->
+      <svg viewBox="0 0 24 24" class="menu-toggle__img" id="menu-open">
+        <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+      </svg>
+      <p class="menu-toggle__text  menu-toggle__text--do">Do list</p>
+    </div>
+
   	<nav class="main-nav  main-nav--hidden" id="main-nav">
   		<ul class="menu">
-  			<li class="menu__item">
-  				
+
+  			<li class="menu__item">  				
   				<a href="#" class="menu__link">
   				  <svg viewBox="0 0 24 24" class="menu__img">
   					  <path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" />
   				  </svg>
   			     Project 1</a>
   			</li>
+
   			<li class="menu__item">
   				<a href="#" class="menu__link">
   					<svg viewBox="0 0 24 24" class="menu__img">
@@ -70,6 +69,7 @@
   					</svg>
   				   Project 2</a>
   			</li>
+
   			<li class="menu__item">
   				<a href="#" class="menu__link">
   					<svg viewBox="0 0 24 24" class="menu__img">
@@ -77,6 +77,7 @@
   					</svg>
   				   Project 3</a>
   			</li>
+
   			<li class="menu__item">
   				<a href="#" class="menu__link">
   					<svg viewBox="0 0 24 24" class="menu__img">
@@ -84,6 +85,7 @@
   					</svg>
   				   Project 4</a>
   			</li>
+
   			<li class="menu__item">  				
   				<a href="#" class="menu__link">
   				  <svg viewBox="0 0 24 24" class="menu__img">
@@ -266,12 +268,14 @@
             <p class="card__text">Name name</p>
             
             <div class="card__gallery">
-              <img src="img/user_01.png" alt="user" class="gallery__img">
-              <img src="img/user_03.png" alt="user" class="gallery__img">
-              <img src="img/user_04.png" alt="user" class="gallery__img">
-              <img src="img/user_02.png" alt="user" class="gallery__img">
-              <img src="img/user_anon.png" alt="user" class="gallery__img">
-              <img src="img/user_anon.png" alt="user" class="gallery__img">
+              <div class="gallery">
+                <img src="img/user_01.png" alt="user" class="gallery__img">
+                <img src="img/user_03.png" alt="user" class="gallery__img">
+                <img src="img/user_04.png" alt="user" class="gallery__img">
+                <img src="img/user_02.png" alt="user" class="gallery__img">
+                <img src="img/user_anon.png" alt="user" class="gallery__img">
+                <img src="img/user_anon.png" alt="user" class="gallery__img">
+              </div>
               <p class="card__text-small  card__text--color">+25</p>
             </div>
             
@@ -368,12 +372,14 @@
             </div>
             <p class="card__text">Name name</p>
             <div class="card__gallery">
-              <img src="img/user_01.png" alt="user" class="gallery__img">
-              <img src="img/user_03.png" alt="user" class="gallery__img">
-              <img src="img/user_04.png" alt="user" class="gallery__img">
-              <img src="img/user_02.png" alt="user" class="gallery__img">
-              <img src="img/user_anon.png" alt="user" class="gallery__img">
-              <img src="img/user_anon.png" alt="user" class="gallery__img">
+              <div class="gallery">
+                <img src="img/user_01.png" alt="user" class="gallery__img">
+                <img src="img/user_03.png" alt="user" class="gallery__img">
+                <img src="img/user_04.png" alt="user" class="gallery__img">
+                <img src="img/user_02.png" alt="user" class="gallery__img">
+                <img src="img/user_anon.png" alt="user" class="gallery__img">
+                <img src="img/user_anon.png" alt="user" class="gallery__img">                
+              </div>
               <p class="card__text-small  card__text--color">+8</p>
             </div>
         
@@ -627,12 +633,14 @@
             <p class="card__text">Name name</p>
             
             <div class="card__gallery">
-              <img src="img/user_01.png" alt="user" class="gallery__img">
-              <img src="img/user_03.png" alt="user" class="gallery__img">
-              <img src="img/user_04.png" alt="user" class="gallery__img">
-              <img src="img/user_02.png" alt="user" class="gallery__img">
-              <img src="img/user_anon.png" alt="user" class="gallery__img">
-              <img src="img/user_anon.png" alt="user" class="gallery__img">
+              <div class="gallery">
+                <img src="img/user_01.png" alt="user" class="gallery__img">
+                <img src="img/user_03.png" alt="user" class="gallery__img">
+                <img src="img/user_04.png" alt="user" class="gallery__img">
+                <img src="img/user_02.png" alt="user" class="gallery__img">
+                <img src="img/user_anon.png" alt="user" class="gallery__img">
+                <img src="img/user_anon.png" alt="user" class="gallery__img">
+              </div>
               <p class="card__text-small  card__text--color">+25</p>
             </div>
             
@@ -729,12 +737,14 @@
             </div>
             <p class="card__text">Name name</p>
             <div class="card__gallery">
-              <img src="img/user_01.png" alt="user" class="gallery__img">
-              <img src="img/user_03.png" alt="user" class="gallery__img">
-              <img src="img/user_04.png" alt="user" class="gallery__img">
-              <img src="img/user_02.png" alt="user" class="gallery__img">
-              <img src="img/user_anon.png" alt="user" class="gallery__img">
-              <img src="img/user_anon.png" alt="user" class="gallery__img">
+              <div class="gallery">
+                <img src="img/user_01.png" alt="user" class="gallery__img">
+                <img src="img/user_03.png" alt="user" class="gallery__img">
+                <img src="img/user_04.png" alt="user" class="gallery__img">
+                <img src="img/user_02.png" alt="user" class="gallery__img">
+                <img src="img/user_anon.png" alt="user" class="gallery__img">
+                <img src="img/user_anon.png" alt="user" class="gallery__img">                
+              </div>
               <p class="card__text-small  card__text--color">+8</p>
             </div>
         
@@ -787,6 +797,7 @@
           </div>
         </div>
       </section>
+
 
   	</div>
 	

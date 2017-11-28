@@ -4,9 +4,9 @@ window.onload = function () {
       btnClosed = document.querySelector("#menu-closed"),
       menu = document.querySelector("#main-nav"),
       toDo = document.querySelector("#text-to"),
-      headerToggle = document.querySelector("#header-toggle"),
+      menuToggle = document.querySelector("#menu-toggle"),
       mainSearch = document.querySelector("#main-search"),
-      Magnify = document.querySelector("#header__magnify"),
+      Magnify = document.querySelector("#page-header__magnify"),
       formOk = document.querySelector("#form__ok"),
       formClosed = document.querySelector("#form__closed"),
       headerSearch = document.querySelector("#header__search");
@@ -33,17 +33,17 @@ window.onload = function () {
 
   function resizeMenu() {
     menu.classList.toggle("main-nav--hidden");  
-    btnOpen.classList.toggle("header-toggle__img--hidden");
-    btnClosed.classList.toggle("header-toggle__img--hidden");
+    btnOpen.classList.toggle("menu-toggle__img--hidden");
+    btnClosed.classList.toggle("menu-toggle__img--hidden");
   } 
 
   function menuTablet() {
     toDo.classList.toggle("hidden");
-    headerToggle.classList.toggle("header-toggle--big");
+    menuToggle.classList.toggle("menu-toggle--big");
   }
 
   function search() {
-    Magnify.classList.toggle("header__magnify--hidden");
+    Magnify.classList.toggle("page-header__magnify--hidden");
   }
 
   function columnSearch() {

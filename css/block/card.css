@@ -137,8 +137,10 @@
       background-size: 16px 16px;
       border-radius: 2px; }
 
-.gallery__img:first-child {
-  margin-right: 25px; }
+.gallery {
+  padding-right: 80px; }
+  .gallery__img:first-child {
+    margin-right: 25px; }
 
 @media screen and (min-width: 1440px) {
   .card__progress-value {
