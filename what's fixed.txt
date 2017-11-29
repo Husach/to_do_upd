@@ -1,0 +1,12 @@
+v 1.1
+
+- menu made separately from header 
+- amended scroll in column
+- accounted for the overflow in menu_item
+- accounted for the overflow in header-column
+- accounted for the overflow in card_mark
+- accounted for the overflow in gallery
+- changed work checkbox'מג
+- changed the positioning in main-search (now over magnify)
+- correction of some padding פעג margin
+- autoresize

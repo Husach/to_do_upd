@@ -4,26 +4,29 @@ window.onload = function () {
       btnClosed = document.querySelector("#menu-closed"),
       menu = document.querySelector("#main-nav"),
       toDo = document.querySelector("#text-to"),
-      headerToggle = document.querySelector("#header-toggle"),
+      menuToggle = document.querySelector("#menu-toggle"),
       mainSearch = document.querySelector("#main-search"),
-      Magnify = document.querySelector("#header__magnify"),
+      Magnify = document.querySelector("#page-header__magnify"),
       formOk = document.querySelector("#form__ok"),
       formClosed = document.querySelector("#form__closed"),
       headerSearch = document.querySelector("#header__search");
   
-  if (window.innerWidth < 1440) {
-    btnOpen.addEventListener("click", resizeMenu, false);
-    btnClosed.addEventListener("click", resizeMenu, false);
-  }
 
-  if (window.innerWidth < 1440 && window.innerWidth > 1023) {
-    btnOpen.addEventListener("click", menuTablet, false);
-    btnClosed.addEventListener("click", menuTablet, false);
-  }
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 1440) {
+      btnOpen.addEventListener("click", resizeMenu, false);
+      btnClosed.addEventListener("click", resizeMenu, false);
 
-  if (window.innerWidth < 1024) {
-    Magnify.addEventListener("click", mobileSearch, false);
-  }
+      if (window.innerWidth > 1023) {
+        btnOpen.addEventListener("click", menuTablet, false);
+        btnClosed.addEventListener("click", menuTablet, false);
+      }
+    }
+
+    if (window.innerWidth < 1024) {
+      Magnify.addEventListener("click", mobileSearch, false);
+    }
+  });
 
   mainSearch.addEventListener("focus", search, false);
   mainSearch.addEventListener("blur", search, false);
@@ -33,17 +36,17 @@ window.onload = function () {
 
   function resizeMenu() {
     menu.classList.toggle("main-nav--hidden");  
-    btnOpen.classList.toggle("header-toggle__img--hidden");
-    btnClosed.classList.toggle("header-toggle__img--hidden");
+    btnOpen.classList.toggle("menu-toggle__img--hidden");
+    btnClosed.classList.toggle("menu-toggle__img--hidden");
   } 
 
   function menuTablet() {
     toDo.classList.toggle("hidden");
-    headerToggle.classList.toggle("header-toggle--big");
+    menuToggle.classList.toggle("menu-toggle--big");
   }
 
   function search() {
-    Magnify.classList.toggle("header__magnify--hidden");
+    Magnify.classList.toggle("page-header__magnify--hidden");
   }
 
   function columnSearch() {

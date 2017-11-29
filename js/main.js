@@ -11,19 +11,22 @@ window.onload = function () {
       formClosed = document.querySelector("#form__closed"),
       headerSearch = document.querySelector("#header__search");
   
-  if (window.innerWidth < 1440) {
-    btnOpen.addEventListener("click", resizeMenu, false);
-    btnClosed.addEventListener("click", resizeMenu, false);
-  }
 
-  if (window.innerWidth < 1440 && window.innerWidth > 1023) {
-    btnOpen.addEventListener("click", menuTablet, false);
-    btnClosed.addEventListener("click", menuTablet, false);
-  }
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 1440) {
+      btnOpen.addEventListener("click", resizeMenu, false);
+      btnClosed.addEventListener("click", resizeMenu, false);
 
-  if (window.innerWidth < 1024) {
-    Magnify.addEventListener("click", mobileSearch, false);
-  }
+      if (window.innerWidth > 1023) {
+        btnOpen.addEventListener("click", menuTablet, false);
+        btnClosed.addEventListener("click", menuTablet, false);
+      }
+    }
+
+    if (window.innerWidth < 1024) {
+      Magnify.addEventListener("click", mobileSearch, false);
+    }
+  });
 
   mainSearch.addEventListener("focus", search, false);
   mainSearch.addEventListener("blur", search, false);
