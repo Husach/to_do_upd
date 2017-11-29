@@ -45,9 +45,12 @@
     display: inline-block;
     width: 279px;
     height: calc(100vh - 67px);
-    overflow: hidden;
-    overflow-y: scroll;
+    overflow: hidden;    
     margin-right: 13px;
+
+    &:hover {
+      overflow-y: scroll;  
+    }
 
     &-wrap {
       width: 262px;

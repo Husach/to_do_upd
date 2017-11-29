@@ -583,8 +583,9 @@ template {
     width: 279px;
     height: calc(100vh - 67px);
     overflow: hidden;
-    overflow-y: scroll;
     margin-right: 13px; }
+    .column:hover {
+      overflow-y: scroll; }
     .column-wrap {
       width: 262px; }
     .column-top {
