@@ -43,7 +43,8 @@
   .page-header {
     justify-content: flex-end;
     background: #fff;
-    padding: 0 70px 0 0; }
+    padding: 0 70px 0 0;
+    height: 67px; }
     .page-header__magnify {
       width: 24px;
       height: 24px; }

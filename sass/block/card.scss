@@ -42,7 +42,8 @@
     }
   }
 
-  &__text {  	
+  &__text {
+    position: relative;
   	font-size: 16px;
   	color: #424a59;
   	margin: 0 0 11px 16px;
@@ -68,6 +69,7 @@
   	&--check {
   		font-size: 14px;
   		margin-left: 5px;
+      cursor: pointer;
   	}
 
   	&--color {
@@ -155,33 +157,44 @@
 
   &__form {
     padding-left: 15px;
+    margin-bottom: 5px;
   }
 
   &__checkbox {
-    display: none;
+    position: relative;
+    cursor: pointer;
+    visibility: hidden;
+    margin-bottom: 10px;
 
-    &-custom {
-      position: relative;      
-      display: inline-block;
-      vertical-align: middle;
-      width: 16px; 
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
       height: 16px;
       border: 1px solid #d0d4dd;
       border-radius: 2px;
-      margin: 7px 0;
+      z-index: 10;
+      visibility: visible;
     }
 
-    &:checked + .card__checkbox-custom::before {
-      content: "";          
-      display: block;       
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: #8edc87 url('../img/check.png') no-repeat center center;
-      background-size: 16px 16px;
-      border-radius: 2px;
+    &:checked {
+      position: relative;
+      
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background: #8ddc86 url('../img/check.png') no-repeat center/cover;      
+        z-index: 10;
+        border-radius: 0;
+        border: 0;
+      }
     }
   }
 }
@@ -205,9 +218,4 @@
       }
     }
   }
-}
-
-.label {
-  display: inline-block;
-  vertical-align: middle;
 }

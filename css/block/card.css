@@ -32,6 +32,7 @@
       .card-mark__line:last-child {
         margin-right: 0; }
   .card__text {
+    position: relative;
     font-size: 16px;
     color: #424a59;
     margin: 0 0 11px 16px; }
@@ -49,7 +50,8 @@
         margin: 5px 0 5px 15px; }
     .card__text--check {
       font-size: 14px;
-      margin-left: 5px; }
+      margin-left: 5px;
+      cursor: pointer; }
     .card__text--color {
       display: flex;
       justify-content: center;
@@ -113,29 +115,37 @@
     height: 18px;
     fill: #fff; }
   .card__form {
-    padding-left: 15px; }
+    padding-left: 15px;
+    margin-bottom: 5px; }
   .card__checkbox {
-    display: none; }
-    .card__checkbox-custom {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    visibility: hidden;
+    margin-bottom: 10px; }
+    .card__checkbox:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 16px;
       height: 16px;
       border: 1px solid #d0d4dd;
       border-radius: 2px;
-      margin: 7px 0; }
-    .card__checkbox:checked + .card__checkbox-custom::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: #8edc87 url("../img/check.png") no-repeat center center;
-      background-size: 16px 16px;
-      border-radius: 2px; }
+      z-index: 10;
+      visibility: visible; }
+    .card__checkbox:checked {
+      position: relative; }
+      .card__checkbox:checked:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background: #8ddc86 url("../img/check.png") no-repeat center/cover;
+        z-index: 10;
+        border-radius: 0;
+        border: 0; }
 
 .gallery {
   padding-right: 80px; }
@@ -145,8 +155,5 @@
 @media screen and (min-width: 1440px) {
   .card__progress-value {
     width: 184px; } }
-.label {
-  display: inline-block;
-  vertical-align: middle; }
 
 /*# sourceMappingURL=card.css.map */

@@ -425,6 +425,7 @@ template {
       .card-mark__line:last-child {
         margin-right: 0; }
   .card__text {
+    position: relative;
     font-size: 16px;
     color: #424a59;
     margin: 0 0 11px 16px; }
@@ -442,7 +443,8 @@ template {
         margin: 5px 0 5px 15px; }
     .card__text--check {
       font-size: 14px;
-      margin-left: 5px; }
+      margin-left: 5px;
+      cursor: pointer; }
     .card__text--color {
       display: flex;
       justify-content: center;
@@ -506,29 +508,37 @@ template {
     height: 18px;
     fill: #fff; }
   .card__form {
-    padding-left: 15px; }
+    padding-left: 15px;
+    margin-bottom: 5px; }
   .card__checkbox {
-    display: none; }
-    .card__checkbox-custom {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    visibility: hidden;
+    margin-bottom: 10px; }
+    .card__checkbox:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 16px;
       height: 16px;
       border: 1px solid #d0d4dd;
       border-radius: 2px;
-      margin: 7px 0; }
-    .card__checkbox:checked + .card__checkbox-custom::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: #8edc87 url("../img/check.png") no-repeat center center;
-      background-size: 16px 16px;
-      border-radius: 2px; }
+      z-index: 10;
+      visibility: visible; }
+    .card__checkbox:checked {
+      position: relative; }
+      .card__checkbox:checked:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background: #8ddc86 url("../img/check.png") no-repeat center/cover;
+        z-index: 10;
+        border-radius: 0;
+        border: 0; }
 
 .gallery {
   padding-right: 80px; }
@@ -538,10 +548,6 @@ template {
 @media screen and (min-width: 1440px) {
   .card__progress-value {
     width: 184px; } }
-.label {
-  display: inline-block;
-  vertical-align: middle; }
-
 .column {
   white-space: normal; }
   .column-header {
@@ -680,9 +686,9 @@ template {
     padding: 0;
     overflow: hidden; }
     .menu-toggle {
-      top: -52px;
+      top: -67px;
       justify-content: space-between;
-      height: 52px;
+      height: 67px;
       width: 54px;
       font-size: 16px;
       background: #373c47;
@@ -700,7 +706,6 @@ template {
         justify-content: space-between; }
     .menu__item {
       border-bottom: 0;
-      width: 54px;
       margin-right: 0; }
       .menu__item:hover {
         background: #292d38;
@@ -790,7 +795,8 @@ template {
   .page-header {
     justify-content: flex-end;
     background: #fff;
-    padding: 0 70px 0 0; }
+    padding: 0 70px 0 0;
+    height: 67px; }
     .page-header__magnify {
       width: 24px;
       height: 24px; }
